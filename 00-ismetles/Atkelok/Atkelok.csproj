@@ -8,13 +8,13 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <None Update="hataratkelok.csv">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </None>
+      <ProjectReference Include="..\Atkelok_Lib\Atkelok_Lib.csproj" />
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Hataratkelok_Lib\Hataratkelok_Lib.csproj" />
+      <None Update="hataratkelok.csv">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
     </ItemGroup>
 
 </Project>
