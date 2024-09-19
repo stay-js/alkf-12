@@ -29,19 +29,15 @@
             var results = _results?.Where(x => x.Name is not null);
 
             return Enumerable.Range(0, 5)
-                .Select(x => (results?.Count(y => y.Score[x] is not null) ?? 0,
-                results?.Select(y => y.Score[x]).Where(y => y is not null).Average() ?? 0,
-                results?.Count(y => y.Score[x] is null) ?? 0
-                ));
+                .Select(idx => (results?.Count(x => x.Score[idx] is not null) ?? 0,
+                results?.Select(x => x.Score[idx]).Where(x => x is not null).Average() ?? 0,
+                results?.Count(x => x.Score[idx] is null) ?? 0));
         }
 
         public IEnumerable<string>? Results => _results?
             .Enumerate()
             .Select(x => x.Item.Name is null
                 ? $"{x.Index + 1};;;"
-                : $"{x.Index + 1};" +
-                    $"{x.Item.Name};" +
-                    $"{x.Item.Percentage:P0};" +
-                    $"{(x.Item.Passed ? "sikeres" : "sikertelen")}");
+                : $"{x.Index + 1};{x.Item.Name};{x.Item.Percentage:P0};{x.Item.Passed}");
     }
 }

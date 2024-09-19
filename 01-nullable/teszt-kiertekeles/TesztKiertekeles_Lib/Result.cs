@@ -3,7 +3,7 @@
     public class Result
     {
         private const int MAX_SCORE = 25;
-        private const double PASSING_PERCENTAGE = .4;
+        private const double PASSING_PERCENTAGE = 0.4;
 
         public string? Name { get; init; }
         public int?[] Score { get; init; }
@@ -22,9 +22,7 @@
 
         public double Percentage => Total / (double)MAX_SCORE;
 
-        public bool Passed => Percentage >= PASSING_PERCENTAGE;
-
-        public bool SubmittedEmpty => Name is not null && Array.TrueForAll(Score, x => x is null);
+        public string Passed => Percentage >= PASSING_PERCENTAGE ? "sikeres" : "sikertelen";
 
         public override string ToString()
         {
