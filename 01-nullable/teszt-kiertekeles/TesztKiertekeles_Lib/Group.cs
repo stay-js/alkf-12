@@ -24,7 +24,16 @@
             }
         }
 
-        public int SubmittedEmpty => _results?.Count(x => x.SubmittedEmpty) ?? 0;
+        public IEnumerable<(int Solutions, double Avg, int SubmittedEmpty)> ScoresPerTask()
+        {
+            var results = _results?.Where(x => x.Name is not null);
+
+            return Enumerable.Range(0, 5)
+                .Select(x => (results?.Count(y => y.Score[x] is not null) ?? 0,
+                results?.Select(y => y.Score[x]).Where(y => y is not null).Average() ?? 0,
+                results?.Count(y => y.Score[x] is null) ?? 0
+                ));
+        }
 
         public IEnumerable<string>? Results => _results?
             .Enumerate()

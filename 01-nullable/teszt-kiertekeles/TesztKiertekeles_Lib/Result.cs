@@ -20,9 +20,11 @@
 
         public int Total => Score.Sum() ?? 0;
 
-        public double Percentage => (double)Total / (double)MAX_SCORE;
+        public double Percentage => Total / (double)MAX_SCORE;
 
         public bool Passed => Percentage >= PASSING_PERCENTAGE;
+
+        public bool SubmittedEmpty => Name is not null && Array.TrueForAll(Score, x => x is null);
 
         public override string ToString()
         {
@@ -33,7 +35,5 @@
                 $"\n5. feladat: {(Score[4] is null ? "-" : $"{Score[4]} pont")}" +
                 $"\nÖsszesen: {Total} pont";
         }
-
-        public bool SubmittedEmpty => Name is not null && Array.TrueForAll(Score, x => x is null);
     }
 }

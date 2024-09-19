@@ -39,7 +39,12 @@ Console.WriteLine(result is null ? "A megadott tanuló nem írta meg a tesztet."
 
 #region 3. feladat
 Console.WriteLine("\n3. feladat");
-Console.WriteLine($"{group.SubmittedEmpty} tanuló adta be üresen a tesztet.");
+int i = 1;
+foreach (var item in group.ScoresPerTask())
+{
+    Console.WriteLine($"{i++}. feladat: {item.Solutions} megoldás," +
+        $" átlagos pontszám: {item.Avg:F2}, üresen beadva: {item.SubmittedEmpty}");
+}
 #endregion
 
 #region 4. feladat
