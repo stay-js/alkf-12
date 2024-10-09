@@ -58,5 +58,5 @@ foreach (var king in kings.HasNickname)
     toWrite.Add($"{king.FormattedName} {(king.CrownedAt is null ? "-" : king.CrownedAt)}");
 }
 
-File.WriteAllLines("melleknev.txt", toWrite);
+await File.WriteAllLinesAsync("melleknev.txt", toWrite);
 #endregion
