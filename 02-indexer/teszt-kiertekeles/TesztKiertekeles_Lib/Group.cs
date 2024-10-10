@@ -12,7 +12,7 @@
 
         public int TookTheTest => _results?.Count(x => x.Name is not null) ?? 0;
 
-        public Result? GetResultByName(string name) => _results?.Find(x => x.Name == name);
+        public Result? this[string name] => _results?.Find(x => x.Name == name);
 
         public IEnumerable<(int Solutions, double Avg, int SubmittedEmpty)> ScoresPerTask()
         {
