@@ -4,11 +4,11 @@
     {
         public int Id { get; set; } = id;
         public string Name { get; set; } = name;
-        public Dictionary<string, List<int>> Grades { get; set; } = [];
+        public Dictionary<Subject, List<int>> Grades { get; set; } = [];
 
-        public void AddSubject(string subject) => Grades.Add(subject, []);
+        public void AddSubject(Subject subject) => Grades.Add(subject, []);
 
-        public void AddGrade(string subject, int grade)
+        public void AddGrade(Subject subject, int grade)
         {
             if (Grades.TryGetValue(subject, out var value)) value.Add(grade);
             else Grades[subject] = [grade];

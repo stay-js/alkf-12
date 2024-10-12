@@ -13,9 +13,9 @@
             get
             {
                 var student = students.Find(x => x.Id == id);
-                if (student is null)
-                    throw new KeyNotFoundException($"Nincs ilyen azonosítójú diák: {id}");
-                return student;
+
+                if (student is not null) return student;
+                throw new KeyNotFoundException($"Nincs ilyen azonosítójú diák: {id}");
             }
         }
 
@@ -24,9 +24,9 @@
             get
             {
                 var subject = subjects.Find(x => x.Name == name);
-                if (subject is null)
-                    throw new KeyNotFoundException($"Nincs ilyen nevű tantárgy: {name}");
-                return subject;
+
+                if (subject is not null) return subject;
+                throw new KeyNotFoundException($"Nincs ilyen nevű tantárgy: {name}");
             }
         }
     }
