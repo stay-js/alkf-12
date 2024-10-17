@@ -1,18 +1,50 @@
-namespace Kifizet_Lib
+﻿namespace Kifizet_Lib
 {
     public class Payouts(IEnumerable<string> lines)
     {
         private readonly List<Payout> _payouts = lines.Select(x =>
             {
                 string[] parts = x.Split(';');
-                return (Name: parts[0], Amount: int.Parse(parts[1]));
+                return (parts[0], int.Parse(parts[1]));
             })
-            .GroupBy(x => x.Name)
-            .Select(g => new Payout(g.Key, g.Sum(x => x.Amount)))
+            .GroupBy(x => x.Item1)
+            .Select(g => new Payout(g.Key, g.Sum(x => x.Item2)))
             .ToList();
 
-        public int this[string name] => _payouts.First(x =>
-            string.Equals(x.Name, name, StringComparison.CurrentCultureIgnoreCase)).Amount;
+        public static int RoundToNearestHundred(int amount) =>
+            (int)Math.Round(amount / 100.0) * 100;
+
+        public static Dictionary<int, int> Change(int amount)
+        {
+            Dictionary<int, int> result = [];
+
+            int[] denominations = [20_000, 10_000, 5_000, 2_000, 1_000, 500, 200, 100];
+
+            foreach (int denomination in denominations)
+            {
+                while (amount >= denomination)
+                {
+                    amount -= denomination;
+
+                    if (result.ContainsKey(denomination)) result[denomination]++;
+                    else result[denomination] = 1;
+                }
+            }
+
+            return result;
+        }
+
+        public int this[string name]
+        {
+            get
+            {
+                var payout = _payouts.Find(x =>
+                    string.Equals(x.Name, name, StringComparison.CurrentCultureIgnoreCase));
+
+                if (payout is not null) return payout.Amount;
+                else throw new KeyNotFoundException($"Nincs ilyen nevű alkalmazott: {name}");
+            }
+        }
 
         public IEnumerable<Payout> ActualPayouts => _payouts
             .OrderBy(x => x.Name)
@@ -25,27 +57,5 @@ namespace Kifizet_Lib
 
         public Dictionary<string, int> ActualPayoutsWithMonogram => ActualPayouts
             .ToDictionary(x => string.Join(" ", x.Name.Split().Select(y => y[0])), x => x.Amount);
-
-        public static int RoundToNearestHundred(int amount) => (int)Math.Round(amount / 100.0) * 100;
-
-        private static Dictionary<int, int> Change(int amount)
-        {
-            Dictionary<int, int> change = [];
-
-            int[] denominations = [20_000, 10_000, 5_000, 2_000, 1_000, 500, 200, 100];
-
-            foreach (int denomination in denominations)
-            {
-                while (amount >= denomination)
-                {
-                    amount -= denomination;
-
-                    if (change.ContainsKey(denomination)) change[denomination]++;
-                    else change[denomination] = 1;
-                }
-            }
-
-            return change;
-        }
     }
 }

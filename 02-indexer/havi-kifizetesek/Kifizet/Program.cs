@@ -35,11 +35,17 @@ try
 {
     int amount = payouts[name];
 
-    Console.WriteLine($"A megadott dolgozó keresete: {amount} Ft, " +
-        $"kifizetése: {Payouts.RoundToNearestHundred(amount)} Ft.");
+    Console.WriteLine($"A megadott dolgozó havi keresete: {amount} Ft, " +
+        $"fizetése: {Payouts.RoundToNearestHundred(amount)} Ft.");
+
+    Console.WriteLine("Kifizetéséhez a következő címletekre van szükség:");
+    foreach (var item in Payouts.Change(amount))
+    {
+        Console.WriteLine($"\t{item.Value} db {item.Key} Ft-os");
+    }
 }
-catch (InvalidOperationException)
+catch (KeyNotFoundException err)
 {
-    Console.WriteLine("Nincs ilyen nevű dolgozó!");
+    Console.WriteLine(err.Message);
 }
 #endregion
