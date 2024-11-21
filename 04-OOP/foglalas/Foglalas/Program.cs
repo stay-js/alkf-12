@@ -33,8 +33,7 @@ Console.WriteLine("A tanár foglalásai:");
 
 foreach (var room in roomRegistration.Rooms)
 {
-    var reservationsByTeacher = room.TimeTable.Reservations
-        .Where(x => string.Equals(x.TeacherId, teacherId, StringComparison.CurrentCultureIgnoreCase));
+    var reservationsByTeacher = room.TimeTable.GetReservationsByTeacherId(teacherId);
     if (!reservationsByTeacher.Any()) continue;
 
     Console.WriteLine(room.Id);

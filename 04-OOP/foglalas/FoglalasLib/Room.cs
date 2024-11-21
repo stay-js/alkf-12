@@ -2,9 +2,9 @@
 {
     public class Room(string id, int capacity)
     {
-        public TimeTable TimeTable { get; set; } = new();
-        public string Id { get; set; } = id;
-        public int Capacity { get; set; } = capacity;
+        public TimeTable TimeTable { get; protected set; } = new();
+        public string Id { get; init; } = id;
+        public int Capacity { get; init; } = capacity;
 
         public virtual void Reserve(Reservation reservation) { }
     }

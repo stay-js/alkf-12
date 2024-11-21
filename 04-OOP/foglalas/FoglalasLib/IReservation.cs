@@ -2,8 +2,8 @@
 {
     public interface IReservation
     {
-        public string RoomId { get; set; }
-        public DateTime Start { get; set; }
-        public DateTime End { get; set; }
+        public string RoomId { get; init; }
+        public DateTime Start { get; init; }
+        public DateTime End { get; init; }
     }
 }

@@ -2,10 +2,10 @@ namespace FoglalasLib
 {
     public class Reservation : IReservation
     {
-        public string RoomId { get; set; }
-        public DateTime Start { get; set; }
-        public DateTime End { get; set; }
-        public string TeacherId { get; set; }
+        public string RoomId { get; init; }
+        public DateTime Start { get; init; }
+        public DateTime End { get; init; }
+        public string TeacherId { get; init; }
 
         public Reservation(DateTime start, int duration, string roomId, string teacher)
         {

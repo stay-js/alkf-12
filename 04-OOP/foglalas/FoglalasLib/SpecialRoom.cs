@@ -10,6 +10,5 @@ namespace FoglalasLib
 
         public override string ToString() =>
             $"{Id} (takarítási idő: {cleaningTime} perc):\nFoglalt időpontok:\n{TimeTable}";
-
     }
 }
