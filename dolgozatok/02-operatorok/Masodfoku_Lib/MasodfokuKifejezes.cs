@@ -4,9 +4,9 @@ namespace Masodfoku_Lib
 {
     public class MasodfokuKifejezes(double a, double b, double c)
     {
-        public double A { get; init; } = a;
-        public double B { get; init; } = b;
-        public double C { get; init; } = c;
+        public double A { get; } = a;
+        public double B { get; } = b;
+        public double C { get; } = c;
 
         public double Discriminant => Math.Pow(B, 2) - (4 * A * C);
 
@@ -29,11 +29,11 @@ namespace Masodfoku_Lib
         
         public override bool Equals(object? obj)
         {
-            if (obj is not MasodfokuKifejezes) return false;
+            if (obj is not MasodfokuKifejezes x) return false;
 
-            return Math.Max(A, (obj as MasodfokuKifejezes).A) % Math.Min(A, (obj as MasodfokuKifejezes).A) == 0
-                && Math.Max(B, (obj as MasodfokuKifejezes).B) % Math.Min(B, (obj as MasodfokuKifejezes).B) == 0
-                && Math.Max(C, (obj as MasodfokuKifejezes).C) % Math.Min(C, (obj as MasodfokuKifejezes).C) == 0;
+            return Math.Max(A, x.A) % Math.Min(A, x.A) == 0
+                && Math.Max(B, x.B) % Math.Min(B, x.B) == 0
+                && Math.Max(C, x.C) % Math.Min(C, x.C) == 0;
         }
     }
 }
