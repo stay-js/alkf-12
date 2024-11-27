@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace Masodfoku_Lib
+﻿namespace Masodfoku_Lib
 {
     public class MasodfokuKifejezes(double a, double b, double c)
     {
@@ -10,7 +8,24 @@ namespace Masodfoku_Lib
 
         public double Discriminant => Math.Pow(B, 2) - (4 * A * C);
 
+        public double GCD => GreatestCommonDivisor(GreatestCommonDivisor(A, B), C);
+
         public override string ToString() => $"{A}x^2+{B}x+{C}";
+
+        public override int GetHashCode() => HashCode.Combine(
+            (A / GCD).GetHashCode(),
+            (B / GCD).GetHashCode(),
+            (C / GCD).GetHashCode()
+            );
+
+        public override bool Equals(object? obj)
+        {
+            if (obj is not MasodfokuKifejezes x) return false;
+
+            return Math.Abs((A / GCD) - (x.A / x.GCD)) < 1e-9
+                && Math.Abs((B / GCD) - (x.B / x.GCD)) < 1e-9
+                && Math.Abs((C / GCD) - (x.C / x.GCD)) < 1e-9;
+        }
 
         public static MasodfokuKifejezes operator +(MasodfokuKifejezes a, MasodfokuKifejezes b)
         {
@@ -25,15 +40,14 @@ namespace Masodfoku_Lib
         public static bool operator ==(MasodfokuKifejezes a, MasodfokuKifejezes b) => a.Equals(b);
         public static bool operator !=(MasodfokuKifejezes a, MasodfokuKifejezes b) => !a.Equals(b);
 
-        public override int GetHashCode() => HashCode.Combine(A.GetHashCode(), B.GetHashCode(), C.GetHashCode());
-        
-        public override bool Equals(object? obj)
+        private static double GreatestCommonDivisor(double a, double b)
         {
-            if (obj is not MasodfokuKifejezes x) return false;
+            while (b > 1e-9)
+            {
+                (a, b) = (b, a % b);
+            }
 
-            return Math.Max(A, x.A) % Math.Min(A, x.A) == 0
-                && Math.Max(B, x.B) % Math.Min(B, x.B) == 0
-                && Math.Max(C, x.C) % Math.Min(C, x.C) == 0;
+            return Math.Abs(a);
         }
     }
 }
