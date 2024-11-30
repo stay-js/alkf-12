@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35222.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Viragkoteszet", "Viragkoteszet\Viragkoteszet.csproj", "{2F2C327B-15FA-4753-A7EC-DC05CFD5B1C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Viragkoteszet_Lib", "Viragkoteszet_Lib\Viragkoteszet_Lib.csproj", "{5736600D-7924-4E96-BC94-AEE3CDD01445}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2F2C327B-15FA-4753-A7EC-DC05CFD5B1C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F2C327B-15FA-4753-A7EC-DC05CFD5B1C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F2C327B-15FA-4753-A7EC-DC05CFD5B1C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F2C327B-15FA-4753-A7EC-DC05CFD5B1C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5736600D-7924-4E96-BC94-AEE3CDD01445}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5736600D-7924-4E96-BC94-AEE3CDD01445}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5736600D-7924-4E96-BC94-AEE3CDD01445}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5736600D-7924-4E96-BC94-AEE3CDD01445}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E58959E6-CB2B-4358-A3D1-B0CE9CEA1D5D}
+	EndGlobalSection
+EndGlobal
