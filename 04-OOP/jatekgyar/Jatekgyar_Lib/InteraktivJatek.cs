@@ -3,10 +3,10 @@
     public sealed class InteraktivJatek(
         string azonosito,
         string tipus,
-        string nev,
+        string megnevezes,
         IEnumerable<string> modulok,
         GyartasAdatok gyartasAdatok
-        ) : Jatek(azonosito, tipus, nev, gyartasAdatok)
+        ) : Jatek(azonosito, tipus, megnevezes, gyartasAdatok)
     {
         private readonly List<string> _modulok = modulok.ToList();
 

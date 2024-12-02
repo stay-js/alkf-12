@@ -2,7 +2,7 @@
 {
     public class Feladat
     {
-        const int MAX_PERC = 8 * 60;
+        private const int MAX_PERC = 8 * 60;
 
         public Jatek Jatek { get; }
         public int Darab { get; }
@@ -18,6 +18,6 @@
         }
 
         public override string ToString() =>
-            $"{Jatek.Nev}: {Darab} db, elkeszítési idő: {ElkeszitesiIdo} perc";
+            $"{Jatek.Megnevezes}: {Darab} db, elkeszítési idő: {ElkeszitesiIdo} perc";
     }
 }

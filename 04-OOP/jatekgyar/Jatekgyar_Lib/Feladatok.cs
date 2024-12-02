@@ -4,10 +4,10 @@
     {
         private readonly Feladat[] _feladatok;
 
-        public Feladat[] FeladatLista => _feladatok;
+        public IEnumerable<Feladat> FeladatLista => _feladatok;
 
         public Dictionary<string, int> DarabSzamok => _feladatok
-            .GroupBy(x => x.Jatek.Nev)
+            .GroupBy(x => x.Jatek.Megnevezes)
             .ToDictionary(x => x.Key, x => x.Sum(y => y.Darab));
 
         private Feladatok(Feladat[] feladatok) => _feladatok = feladatok;
@@ -23,6 +23,7 @@
             return new Feladatok(newFeladatok);
         }
 
-        public override string ToString() => "\t" + string.Join("\n\t", _feladatok.Select(x => x.ToString()));
+        public override string ToString() => "\t"
+            + string.Join("\n\t", _feladatok.Select(x => x.ToString()));
     }
 }

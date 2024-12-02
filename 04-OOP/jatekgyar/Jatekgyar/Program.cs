@@ -9,14 +9,14 @@ Console.WriteLine("Elérhető gyártás azonosítók: " +
 
 var jatekok = new Jatekok(File.ReadLines("ajandekok.txt").Skip(1), gyartasAdatok);
 
-Console.WriteLine("\nA gyártott játékok: " +
-    string.Join(", ", jatekok.JatekTipusok));
+Console.WriteLine($"\nA gyártott játékok: {string.Join(", ", jatekok.JatekTipusok)}");
 
 var feladatok = new Feladatok();
 
 foreach (string line in File.ReadLines("feladatok.txt").Skip(1))
 {
     string[] parts = line.Split(';');
+
     string azonosito = parts[0];
     int darab = int.Parse(parts[1]);
 
@@ -31,15 +31,9 @@ foreach (string line in File.ReadLines("feladatok.txt").Skip(1))
     {
         using var output = new StreamWriter("hibalista.txt", true);
 
-        if (jatek is null)
-        {
-            await output.WriteLineAsync($"{azonosito}: {e.Message}");
-        }
-        else
-        {
-            await output.WriteLineAsync($"{e.Message} - " +
-              $"{darab} db {jatek.Nev}: {jatek.ElkeszitesiIdo * darab} perc");
-        }
+        await output.WriteLineAsync(jatek is null
+            ? $"{azonosito}: {e.Message}"
+            : $"{e.Message} - {darab} db {jatek.Megnevezes}: {jatek.ElkeszitesiIdo * darab} perc");
     }
 }
 

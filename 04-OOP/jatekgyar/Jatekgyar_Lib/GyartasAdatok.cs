@@ -8,9 +8,11 @@
             return new GyartasAdat(parts[0], parts[1], int.Parse(parts[2]));
         }).ToList();
 
-        public IEnumerable<string> ElerhetoGyartasAzonositok => _gyartasAdatok.Select(x => x.Azonosito).Order();
+        public IEnumerable<string> ElerhetoGyartasAzonositok => _gyartasAdatok
+            .Select(x => x.Azonosito)
+            .Order();
 
-        public GyartasAdat this[string azonosito] => _gyartasAdatok.Find(x => x.Azonosito == azonosito)
-            ?? throw new NemLetezoJatekException();
+        public GyartasAdat this[string azonosito] => _gyartasAdatok
+            .Find(x => x.Azonosito == azonosito) ?? throw new NemLetezoJatekException();
     }
 }

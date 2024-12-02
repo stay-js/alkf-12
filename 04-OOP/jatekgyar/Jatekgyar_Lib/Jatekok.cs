@@ -11,7 +11,7 @@
 
         public IEnumerable<string> JatekTipusok => _jatekok
             .Where(x => x.Tipus.First() != 'k')
-            .Select(x => x.Nev)
+            .Select(x => x.Megnevezes)
             .Order();
     }
 }
