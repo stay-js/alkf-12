@@ -30,11 +30,9 @@ foreach (string line in File.ReadLines("feladatok.txt").Skip(1))
     }
     catch (Exception e)
     {
-        using var output = new StreamWriter("hibalista.txt", true);
-
-        await output.WriteLineAsync(jatek is null
-            ? $"{azonosito}: {e.Message}"
-            : $"{e.Message} - {darab} db {jatek.Megnevezes}: {jatek.ElkeszitesiIdo * darab} perc");
+        await File.AppendAllTextAsync("hibalista.txt", jatek is null
+            ? $"{azonosito}: {e.Message}\n"
+            : $"{e.Message} - {darab} db {jatek.Megnevezes}: {jatek.ElkeszitesiIdo * darab} perc\n");
     }
 }
 

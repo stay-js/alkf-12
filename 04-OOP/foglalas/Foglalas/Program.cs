@@ -17,8 +17,7 @@ foreach (string line in File.ReadLines("foglalasok.txt").Skip(1))
     }
     catch (Exception e)
     {
-        using StreamWriter output = new("hibak.txt", true);
-        await output.WriteLineAsync($"{line} - {e.Message}");
+        await File.WriteAllTextAsync("hibak.txt", $"{line} - {e.Message}\n");
     }
 }
 
