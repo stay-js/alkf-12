@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35222.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jatekgyar", "Jatekgyar\Jatekgyar.csproj", "{B2CEFC67-6582-4C89-9B13-EC3B03036A28}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jatekgyar_Lib", "Jatekgyar_Lib\Jatekgyar_Lib.csproj", "{16B951F7-7FD7-4FC4-865A-A271C2655907}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B2CEFC67-6582-4C89-9B13-EC3B03036A28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2CEFC67-6582-4C89-9B13-EC3B03036A28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2CEFC67-6582-4C89-9B13-EC3B03036A28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2CEFC67-6582-4C89-9B13-EC3B03036A28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16B951F7-7FD7-4FC4-865A-A271C2655907}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16B951F7-7FD7-4FC4-865A-A271C2655907}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16B951F7-7FD7-4FC4-865A-A271C2655907}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16B951F7-7FD7-4FC4-865A-A271C2655907}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9E95DE7D-160F-4445-9E7C-B4E50510FAED}
+	EndGlobalSection
+EndGlobal
