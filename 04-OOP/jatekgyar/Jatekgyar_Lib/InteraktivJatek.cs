@@ -14,6 +14,6 @@
             .Sum(x => _gyartasAdatok[TipusMeghatarozas(x)].ElkeszitesiIdo);
 
         private static string TipusMeghatarozas(string modul) =>
-            modul.First() == 'k' ? modul : modul.First().ToString();
+            modul.StartsWith('k') ? modul : modul.First().ToString();
     }
 }

@@ -10,7 +10,7 @@
             ?? throw new NemLetezoJatekException();
 
         public IEnumerable<string> JatekTipusok => _jatekok
-            .Where(x => x.Tipus.First() != 'k')
+            .Where(x => !x.Tipus.StartsWith('k'))
             .Select(x => x.Megnevezes)
             .Order();
     }
