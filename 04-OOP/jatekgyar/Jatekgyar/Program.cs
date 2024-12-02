@@ -9,7 +9,8 @@ Console.WriteLine("Elérhető gyártás azonosítók: " +
 
 var jatekok = new Jatekok(File.ReadLines("ajandekok.txt").Skip(1), gyartasAdatok);
 
-Console.WriteLine($"\nA gyártott játékok: {string.Join(", ", jatekok.JatekTipusok)}");
+Console.WriteLine("\nA gyártott játékok: " +
+    string.Join(", ", jatekok.JatekTipusok.Select(x => x.Megnevezes)));
 
 var feladatok = new Feladatok();
 

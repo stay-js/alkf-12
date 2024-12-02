@@ -9,9 +9,8 @@
         public Jatek this[string azonosito] => _jatekok.Find(x => x.Azonosito == azonosito)
             ?? throw new NemLetezoJatekException();
 
-        public IEnumerable<string> JatekTipusok => _jatekok
+        public IEnumerable<Jatek> JatekTipusok => _jatekok
             .Where(x => !x.Tipus.StartsWith('k'))
-            .Select(x => x.Megnevezes)
-            .Order();
+            .OrderBy(x => x.Megnevezes);
     }
 }
