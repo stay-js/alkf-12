@@ -12,7 +12,7 @@
 
         public bool SzabadE(DateOnly berlesKezdet, int napokSzama) =>
             !FoglaltIdoszakok.Exists(x => berlesKezdet <= x.BerlesVege
-            && x.BerlesKezdet <= berlesKezdet.AddDays(napokSzama));
+            && x.BerlesKezdet <= berlesKezdet.AddDays(napokSzama - 1));
 
         public override string ToString() =>
             string.Join('\n', FoglaltIdoszakok.OrderBy(x => x.BerlesKezdet));

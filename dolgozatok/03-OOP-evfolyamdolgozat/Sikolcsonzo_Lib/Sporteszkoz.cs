@@ -16,6 +16,6 @@
 
         public abstract int Bevetel();
 
-        public bool this[DateOnly nap] => _foglalas.SzabadE(nap, 0);
+        public bool this[DateOnly nap] => _foglalas.SzabadE(nap, 1);
     }
 }
