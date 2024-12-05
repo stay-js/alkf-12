@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35208.52
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sikolcsonzo", "Sikolcsonzo\Sikolcsonzo.csproj", "{DE57AEC2-3849-47C8-A727-C5A7B36DEDE3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sikolcsonzo_Lib", "Sikolcsonzo_Lib\Sikolcsonzo_Lib.csproj", "{0D1255D5-2FBC-4E20-AC0F-636BC1187782}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DE57AEC2-3849-47C8-A727-C5A7B36DEDE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE57AEC2-3849-47C8-A727-C5A7B36DEDE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE57AEC2-3849-47C8-A727-C5A7B36DEDE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE57AEC2-3849-47C8-A727-C5A7B36DEDE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D1255D5-2FBC-4E20-AC0F-636BC1187782}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D1255D5-2FBC-4E20-AC0F-636BC1187782}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D1255D5-2FBC-4E20-AC0F-636BC1187782}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D1255D5-2FBC-4E20-AC0F-636BC1187782}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C4D3637F-C076-4428-88C6-341E487A9AE9}
+	EndGlobalSection
+EndGlobal
