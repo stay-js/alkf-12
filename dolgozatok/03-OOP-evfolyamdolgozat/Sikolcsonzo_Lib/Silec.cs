@@ -1,6 +1,6 @@
 ﻿namespace Sikolcsonzo_Lib
 {
-    public class Silec(string azonosito, string leiras, int meret)
+    public sealed class Silec(string azonosito, string leiras, int meret)
         : Sporteszkoz(azonosito, leiras, meret)
     {
         private const int ELSO_NAP = 8_000;

@@ -1,6 +1,6 @@
 ﻿namespace Sikolcsonzo_Lib
 {
-    internal class Snowboard(string azonosito, string leiras, int meret, bool cipovel)
+    public sealed class Snowboard(string azonosito, string leiras, int meret, bool cipovel)
         : Sporteszkoz(azonosito, leiras, meret)
     {
         private const int ELSO_NAP = 9_000;
