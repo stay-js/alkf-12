@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ajandekdoboz", "Ajandekdoboz\Ajandekdoboz.csproj", "{763BB9E8-49B8-4722-B5F1-8D64E42E7E8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ajandekdoboz_Lib", "Ajandekdoboz_Lib\Ajandekdoboz_Lib.csproj", "{747A3624-5019-4F4A-BE60-93F8B0C5C2D0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{763BB9E8-49B8-4722-B5F1-8D64E42E7E8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{763BB9E8-49B8-4722-B5F1-8D64E42E7E8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{763BB9E8-49B8-4722-B5F1-8D64E42E7E8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{763BB9E8-49B8-4722-B5F1-8D64E42E7E8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{747A3624-5019-4F4A-BE60-93F8B0C5C2D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{747A3624-5019-4F4A-BE60-93F8B0C5C2D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{747A3624-5019-4F4A-BE60-93F8B0C5C2D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{747A3624-5019-4F4A-BE60-93F8B0C5C2D0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
