@@ -1,23 +1,23 @@
 ﻿Kozmetikai csomag;15000
-Sampon;Cosmetics
-Arc Krém;Cosmetics
-Parfüm;Cosmetics
+Sampon;c
+Arc Krém;c
+Parfüm;c
 
 Édességválogatás;5000
-Csokoládé;Sweets
-Szaloncukor;Sweets
-Bonbon;Sweets
-Bejgli;Sweets
+Csokoládé;s
+Szaloncukor;s
+Bonbon;s
+Bejgli;s
 
 Borválogatás;20000
-Vörösbor;Wine
-Fehérbor;Wine
+Vörösbor;w
+Fehérbor;w
 
 Füstölt ételcsomag;12000
-Füstölt sonka;Food
-Füstölt kolbász;Food
-Füstölt sajt;Food
+Füstölt sonka;f
+Füstölt kolbász;f
+Füstölt sajt;f
 
 Érvénytelen csomag;0
-Kenyér;Food
-Vörösbor;Wine
+Kenyér;f
+Vörösbor;w

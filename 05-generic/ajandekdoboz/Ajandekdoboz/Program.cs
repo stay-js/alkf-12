@@ -24,11 +24,9 @@ static List<Box<Product>> ReadGiftBoxes(string filePath)
 
     string input = File.ReadAllText(filePath);
 
-
     foreach (string box in input.Split("\n\n"))
     {
         string[] lines = box.Split('\n');
-
         string[] boxParts = lines[0].Split(';');
         var currentBox = new Box<Product>(boxParts[0], int.Parse(boxParts[1]));
 
@@ -40,7 +38,14 @@ static List<Box<Product>> ReadGiftBoxes(string filePath)
 
             try
             {
-                currentBox.AddProduct(new Product(parts[0], Enum.Parse<ProductType>(parts[1])));
+                currentBox.AddProduct(parts[1] switch
+                {
+                    "c" => new Cosmetics(parts[0]),
+                    "f" => new Food(parts[0]),
+                    "s" => new Sweets(parts[0]),
+                    "w" => new Wine(parts[0]),
+                    _ => throw new InvalidProductTypeException()
+                });
             }
             catch (ProductTypeMixException e)
             {

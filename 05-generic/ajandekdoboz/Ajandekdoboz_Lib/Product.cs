@@ -1,10 +1,9 @@
 ﻿namespace Ajandekdoboz_Lib
 {
-    public class Product(string name, ProductType type)
+    public class Product(string name)
     {
         public string Name { get; init; } = name;
-        public ProductType Type { get; set; } = type;
 
-        public override string ToString() => $"{Name} ({Type})";
+        public override string ToString() => Name;
     }
 }
