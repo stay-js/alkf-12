@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Autoverseny", "Autoverseny\Autoverseny.csproj", "{77EA8A4D-E413-4A04-9ECA-46820EB9B6EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Autoverseny_Lib", "Autoverseny_Lib\Autoverseny_Lib.csproj", "{13339E2F-54F9-406C-AF79-48B540DBA40A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{77EA8A4D-E413-4A04-9ECA-46820EB9B6EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77EA8A4D-E413-4A04-9ECA-46820EB9B6EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77EA8A4D-E413-4A04-9ECA-46820EB9B6EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77EA8A4D-E413-4A04-9ECA-46820EB9B6EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13339E2F-54F9-406C-AF79-48B540DBA40A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13339E2F-54F9-406C-AF79-48B540DBA40A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13339E2F-54F9-406C-AF79-48B540DBA40A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13339E2F-54F9-406C-AF79-48B540DBA40A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
