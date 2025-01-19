@@ -12,6 +12,14 @@
         public int CurrentLap { get; private set; } = 1;
         public int DriverCount => _drivers.Count;
 
+        public string Result => $"Lap {CurrentLap} / {Laps} Result:" +
+            $"\n\nOrder:\n{string.Join("\n",
+                _drivers.Enumerate().Select(x => $"{x.Index + 1}. {x.Item.Name}"))}" +
+            $"\n\nOut:\n{string.Join("\n", _out.Select(x => x.Name))}" +
+            "\n\nPodium:\n\t- " +
+            string.Join("\n\t- ",
+                Drivers.Take(3).Enumerate().Select(x => $"{x.Index + 1}. {x.Item.Name}"));
+
         public void AddToOut(Driver driver) => _out.Add(driver);
 
         public Race(string input)
@@ -49,7 +57,9 @@
         }
 
         public override string ToString() => $"{CurrentLap} / {Laps}" +
-            $"\n\nOrder:\n{string.Join("\n", _drivers)}" +
-            $"\n\nOut:\n{string.Join("\n", _out)}";
+            $"\n\nOrder:\n{string.Join("\n",
+                _drivers.Enumerate().Select(x => $"{x.Index + 1}. {x.Item}"))}" +
+            $"\n\nOut:\n{string.Join("\n", _out.Select(x => x.Name))}" +
+            "\n\n\nPress any key for next lap...";
     }
 }

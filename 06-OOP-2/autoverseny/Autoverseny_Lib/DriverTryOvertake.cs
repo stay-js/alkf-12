@@ -22,6 +22,7 @@
             if (_race.CurrentLap % OVERTAKE_LAPS != 0) return;
             if (FuelLevel < OVERTAKE_FUEL_CONSUMPTION) return;
 
+            FuelLevel -= OVERTAKE_FUEL_CONSUMPTION;
             overtakeTrialCount++;
 
             int defenderIndex = index - 1;

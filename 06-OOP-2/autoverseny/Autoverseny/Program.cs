@@ -1,6 +1,6 @@
 ﻿using Autoverseny_Lib;
 
-Console.Write("Adja meg a fájl nevét: ");
+Console.Write("Enter the file name: ");
 string fileName = Console.ReadLine() ?? "";
 
 var race = new Race(await File.ReadAllTextAsync(fileName));
@@ -9,10 +9,9 @@ while (race.CurrentLap < race.Laps)
 {
     Console.Clear();
     Console.WriteLine(race);
-    Console.ReadLine();
+    Console.ReadKey();
     race.Next();
 }
 
 Console.Clear();
-Console.WriteLine(race);
-Console.WriteLine($"\n\nPodium:\n\t- {string.Join("\n\t- ", race.Drivers.Take(3))}");
+Console.WriteLine(race.Result);

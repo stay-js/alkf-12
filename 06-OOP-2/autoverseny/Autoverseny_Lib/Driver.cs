@@ -34,6 +34,6 @@
                 _race.NewOrder.Insert(index + REFUEL_PLACE_PENALTY, this);
         }
 
-        public override string ToString() => Name;
+        public override string ToString() => $"{Name} (Fuel level: {FuelLevel}%) - {GetType().Name}";
     }
 }
