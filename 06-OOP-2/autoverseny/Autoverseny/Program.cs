@@ -1,9 +1,22 @@
 ﻿using Autoverseny_Lib;
 
-Console.Write("Enter the file name: ");
-string fileName = Console.ReadLine() ?? "";
+Race? race = null;
 
-var race = new Race(await File.ReadAllTextAsync(fileName));
+while (race is null)
+{
+    Console.Clear();
+    Console.Write("Enter a file name: ");
+    string fileName = Console.ReadLine() ?? "";
+
+    try
+    {
+        race = new Race(await File.ReadAllTextAsync(fileName));
+    }
+    catch
+    {
+        Console.WriteLine("Invalid file.");
+    }
+}
 
 while (race.CurrentLap < race.Laps)
 {

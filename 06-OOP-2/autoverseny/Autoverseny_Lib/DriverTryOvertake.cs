@@ -76,6 +76,8 @@
             {
                 (_race.NewOrder[defenderIndex], _race.NewOrder[index]) =
                     (_race.NewOrder[index], _race.NewOrder[defenderIndex]);
+
+                _race.AddToLog($"{Name} overtook {defender.Name}.");
             }
         }
     }

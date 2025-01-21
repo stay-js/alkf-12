@@ -12,7 +12,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="race.txt">
+    <None Update="f1-2024.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="race.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
