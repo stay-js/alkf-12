@@ -49,8 +49,18 @@
         public void Next()
         {
             FuelLevel -= FUEL_CONSUMPTION_PER_LAP;
-            if (FuelLevel < MIN_FUEL_LEVEL) Refuel();
-            else TryOvertake();
+            
+            if (FuelLevel < MIN_FUEL_LEVEL)
+            {
+                Refuel();
+                return;
+            }
+
+            try
+            {
+                TryOvertake();
+            }
+            catch { }
         }
 
         private void Refuel()
@@ -64,7 +74,7 @@
             if (index + REFUEL_PLACE_PENALTY >= _race.DriverCount - 1)
                 _race.NewOrder.Add(this);
             else
-                _race.NewOrder.Insert(index + REFUEL_PLACE_PENALTY, this);
+                _race.NewOrder.Insert(index + REFUEL_PLACE_PENALTY - 1, this);
 
             _race.AddToLog($"{Name} has refueld.");
         }
