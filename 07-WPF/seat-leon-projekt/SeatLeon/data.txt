@@ -1,0 +1,14 @@
+﻿Gyártmány: Seat
+Típus: Leon (1M)
+Gyártás éve: 2000
+Kivitel: Ferdehátú
+Ajtók száma: 5
+Motorkód: ASV
+Hengerűrtartalom: 1896 cm³
+Maximális teljesítmény: 81 kW (110 LE)
+Maximális forgatónyomaték: 235 Nm
+Hajtás: Első kerék
+Sebességváltó: Manuális (5 fokozatú)
+Üzemanyag: Gázolaj
+Üzemanyagtank: 55 liter
+Vegyes fogyasztás: 5,0 l/100 km
