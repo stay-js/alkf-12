@@ -1,0 +1,12 @@
+﻿<Window x:Class="Tarskereso.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tarskereso"
+        mc:Ignorable="d"
+        Title="Dating App" MinHeight="500" Width="400" Background="LightPink">
+    <Grid HorizontalAlignment="Center">
+        <ContentControl x:Name="MainContent" HorizontalAlignment="Center"/>
+    </Grid>
+</Window>
