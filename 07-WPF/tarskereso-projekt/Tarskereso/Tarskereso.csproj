@@ -8,4 +8,8 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Tarskereso_Lib\Tarskereso_Lib.csproj" />
+  </ItemGroup>
+
 </Project>

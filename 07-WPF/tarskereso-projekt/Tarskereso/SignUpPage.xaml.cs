@@ -1,7 +1,7 @@
 ﻿using System.IO;
-using System.Net.Mail;
 using System.Windows;
 using System.Windows.Controls;
+using Tarskereso_Lib;
 
 namespace Tarskereso
 {
@@ -33,45 +33,33 @@ namespace Tarskereso
                 return;
             }
 
-            if (!MailAddress.TryCreate(email, out _))
+            if (!Validator.ValidateEmail(email))
             {
                 MessageBox.Show("Please input a valid e-mail address.", "Error");
                 return;
             }
 
-            if (!ValidatePassword(password, confirmPassword, out string? message))
+            if (!Validator.ValidatePassword(password, confirmPassword, out string? message))
             {
                 MessageBox.Show(message, "Error");
                 return;
             }
 
-            if (dateOfBirth > DateTime.Now.AddYears(-18))
+            if (!Validator.ValidateAge(dateOfBirth))
             {
                 MessageBox.Show("You must be at least 18 years old!", "Error");
+                return;
+            }
+
+            if (TermsCheckBox.IsChecked != true)
+            {
+                MessageBox.Show("Please accept the terms and conditions.", "Error");
                 return;
             }
 
             File.WriteAllText("out.txt", string.Join(";", name, email, password, dateOfBirth));
 
             _mainWindow.GoToSetUpProfilePage();
-        }
-
-        private static bool ValidatePassword(string password, string confrimPassword, out string? message)
-        {
-            if (password != confrimPassword)
-            {
-                message = "Passwords doesn't match!";
-                return false;
-            }
-
-            if (password.Length < 8)
-            {
-                message = "Password length must be at least 8!";
-                return false;
-            }
-
-            message = null;
-            return true;
         }
     }
 }

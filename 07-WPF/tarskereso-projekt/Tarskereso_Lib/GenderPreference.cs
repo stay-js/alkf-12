@@ -1,11 +1,5 @@
-﻿namespace Tarskereso
+﻿namespace Tarskereso_Lib
 {
-    public enum Gender
-    {
-        Male,
-        Female
-    }
-
     public enum GenderPreference
     {
         Male,
