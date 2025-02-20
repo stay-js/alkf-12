@@ -12,44 +12,21 @@
 
             <GroupBox Header="Gender" VerticalAlignment="Top" Margin="0,0,10,0">
                 <StackPanel>
-                    <RadioButton
-                        Content="Male"
-                        Name="RadioButtonMale"
-                        GroupName="GenderGroup"
-                        Checked="RadioButtonMale_Checked"/>
-                    
-                    <RadioButton
-                        Content="Female"
-                        Name="RadioButtonFemale"
-                        GroupName="GenderGroup"
-                        Checked="RadioButtonFemale_Checked"/>
+                    <RadioButton Content="Male" Name="MaleRadioButton" IsChecked="True"/>
+                    <RadioButton Content="Female" Name="FemaleRadioButton"/>
                 </StackPanel>
             </GroupBox>
 
             <GroupBox Grid.Column="1" Header="Gender Preference" VerticalAlignment="Top" Margin="10,0,0,0">
                 <StackPanel>
-                    <RadioButton
-                        Content="Male"
-                        Name="RadioButtonPreferenceMale"
-                        GroupName="GenderPreferenceGroup"
-                        Checked="RadioButtonPreferenceMale_Checked"/>
-                    
-                    <RadioButton
-                        Content="Female"
-                        Name="RadioButtonPreferenceFemale"
-                        GroupName="GenderPreferenceGroup"
-                        Checked="RadioButtonPreferenceFemale_Checked"/>
-                    
-                    <RadioButton
-                        Content="Both"
-                        Name="RadioButtonPreferenceBoth"
-                        GroupName="GenderPreferenceGroup"
-                        Checked="RadioButtonPreferenceBoth_Checked"/>
+                    <RadioButton Content="Male" Name="MalePreferenceRadioButton" IsChecked="True"/>
+                    <RadioButton Content="Female" Name="FemalePreferenceRadioButton"/>
+                    <RadioButton Content="Both" Name="BothPreferenceRadioButton"/>
                 </StackPanel>
             </GroupBox>
         </Grid>
 
-        <TextBlock Text="Interests (seaparate with comma):" Margin="0,10,0,0"/>
+        <Label Content="Interests (seaparate with comma):" Margin="0,10,0,0"/>
         <TextBox
             Name="InterestsTextBox"
             Margin="0,0,0,20"

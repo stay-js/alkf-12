@@ -29,31 +29,43 @@ namespace Tarskereso
                 || string.IsNullOrEmpty(confirmPassword)
                 || dateOfBirth is null)
             {
-                MessageBox.Show("Please fill in all fields.", "Error");
+                MessageBox.Show("Please fill in all fields.",
+                    "Error",
+                    MessageBoxButton.OK,
+                    MessageBoxImage.Error);
                 return;
             }
 
             if (!Validator.ValidateEmail(email))
             {
-                MessageBox.Show("Please input a valid e-mail address.", "Error");
+                MessageBox.Show("Please input a valid e-mail address.",
+                    "Error",
+                    MessageBoxButton.OK,
+                    MessageBoxImage.Error);
                 return;
             }
 
             if (!Validator.ValidatePassword(password, confirmPassword, out string? message))
             {
-                MessageBox.Show(message, "Error");
+                MessageBox.Show(message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
 
             if (!Validator.ValidateAge(dateOfBirth))
             {
-                MessageBox.Show("You must be at least 18 years old!", "Error");
+                MessageBox.Show("You must be at least 18 years old!",
+                    "Error",
+                    MessageBoxButton.OK,
+                    MessageBoxImage.Error);
                 return;
             }
 
             if (TermsCheckBox.IsChecked != true)
             {
-                MessageBox.Show("Please accept the terms and conditions.", "Error");
+                MessageBox.Show("Please accept the terms and conditions.",
+                    "Error",
+                    MessageBoxButton.OK,
+                    MessageBoxImage.Error);
                 return;
             }
 
