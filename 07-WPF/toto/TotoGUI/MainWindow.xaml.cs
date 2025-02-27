@@ -8,6 +8,7 @@ namespace TotoGUI
         public MainWindow()
         {
             InitializeComponent();
+            ResultsTextBox.Text = "12X12X12X12X12";
             UpdateUI();
         }
 
@@ -39,7 +40,7 @@ namespace TotoGUI
                 $"Helytelen karakterek az eredményben ({string.Join(';', invalidChars)})";
         }
 
-        private void SetSaveButtonState() =>SaveButton.IsEnabled =
+        private void SetSaveButtonState() => SaveButton.IsEnabled =
             IncorrectCharacterCountCheckBox.IsChecked != true
             && InvalidCharactersInResultsCheckBox.IsChecked != true;
     }

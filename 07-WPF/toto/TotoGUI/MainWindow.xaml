@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TotoGUI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="200" Width="350">
+        Title="Totó eredmény ellenőrző" Height="200" Width="350">
     <StackPanel>
         <TextBlock Text="Kérem a forduló eredményeit [1, 2, X]:" Margin="10,5"/>
         <TextBox
