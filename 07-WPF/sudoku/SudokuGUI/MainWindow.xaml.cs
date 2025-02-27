@@ -36,21 +36,23 @@ namespace SudokuGUI
                     "Info",
                     MessageBoxButton.OK,
                     MessageBoxImage.Information);
+                return;
             }
-            else if (length > correctLength)
+
+            if (length > correctLength)
             {
                 MessageBox.Show($"A feladvány hosszú: törlendő {length - correctLength} számjegy!",
                     "Info",
                     MessageBoxButton.OK,
                     MessageBoxImage.Information);
+                return;
             }
-            else
-            {
-                MessageBox.Show($"A feladvány rövid: kell még {correctLength - length} számjegy!",
-                    "Info",
-                    MessageBoxButton.OK,
-                    MessageBoxImage.Information);
-            }
+
+            MessageBox.Show($"A feladvány rövid: kell még {correctLength - length} számjegy!",
+                "Info",
+                MessageBoxButton.OK,
+                MessageBoxImage.Information);
+
         }
 
         private void StartingStateTextBox_TextChanged(object sender, TextChangedEventArgs e) =>

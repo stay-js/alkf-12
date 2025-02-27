@@ -8,11 +8,13 @@ namespace TotoGUI
         public MainWindow()
         {
             InitializeComponent();
+
             ResultsTextBox.Text = "12X12X12X12X12";
             UpdateUI();
         }
 
-        private void ResultsTextBox_TextChanged(object sender, TextChangedEventArgs e) => UpdateUI();
+        private void ResultsTextBox_TextChanged(object sender, TextChangedEventArgs e) =>
+            UpdateUI();
 
         private void UpdateUI()
         {

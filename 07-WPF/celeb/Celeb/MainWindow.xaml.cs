@@ -10,8 +10,9 @@ namespace Celeb
 
         public MainWindow()
         {
-            InitializeComponent();
             _people = ReadPeople();
+
+            InitializeComponent();
             LoadNationalities();
         }
 
@@ -22,7 +23,7 @@ namespace Celeb
             if (string.IsNullOrWhiteSpace(name))
             {
                 MessageBox.Show("Adja meg a híres ember nevét!",
-                    "Hiba!",
+                    "Hiba",
                     MessageBoxButton.OK,
                     MessageBoxImage.Error);
                 return;
