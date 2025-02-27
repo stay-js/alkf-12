@@ -38,6 +38,7 @@ namespace Tarskereso
                 "Success",
                 MessageBoxButton.OK,
                 MessageBoxImage.Information);
+
             Environment.Exit(0);
         }
     }

@@ -4,27 +4,22 @@
     <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="250">
         <TextBlock Text="Set Up Profile" FontSize="24" Margin="0,0,0,20" HorizontalAlignment="Center"/>
 
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
             <GroupBox Header="Gender" VerticalAlignment="Top" Margin="0,0,10,0">
                 <StackPanel>
-                    <RadioButton Content="Male" Name="MaleRadioButton" IsChecked="True"/>
-                    <RadioButton Content="Female" Name="FemaleRadioButton"/>
+                    <RadioButton Name="MaleRadioButton" IsChecked="True" Content="Male"/>
+                    <RadioButton Name="FemaleRadioButton" Content="Female"/>
                 </StackPanel>
             </GroupBox>
 
-            <GroupBox Grid.Column="1" Header="Gender Preference" VerticalAlignment="Top" Margin="10,0,0,0">
+            <GroupBox Header="Gender Preference" VerticalAlignment="Top" Margin="10,0,0,0">
                 <StackPanel>
-                    <RadioButton Content="Male" Name="MalePreferenceRadioButton" IsChecked="True"/>
-                    <RadioButton Content="Female" Name="FemalePreferenceRadioButton"/>
-                    <RadioButton Content="Both" Name="BothPreferenceRadioButton"/>
+                    <RadioButton Name="MalePreferenceRadioButton" Content="Male" IsChecked="True"/>
+                    <RadioButton Name="FemalePreferenceRadioButton" Content="Female"/>
+                    <RadioButton Name="BothPreferenceRadioButton" Content="Both"/>
                 </StackPanel>
             </GroupBox>
-        </Grid>
+        </StackPanel>
 
         <Label Content="Interests (seaparate with comma):" Margin="0,10,0,0"/>
         <TextBox
@@ -36,6 +31,11 @@
             HorizontalScrollBarVisibility="Disabled"
             VerticalScrollBarVisibility="Auto"/>
 
-        <Button Content="Finish" Width="200" Height="40" Click="FinishButton_Click"/>
+        <Button
+            Name="FinishButton"
+            Width="200"
+            Height="40"
+            Content="Finish"
+            Click="FinishButton_Click"/>
     </StackPanel>
 </UserControl>

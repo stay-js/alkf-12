@@ -10,6 +10,7 @@ namespace Tarskereso
             MainContent.Content = new SignUpPage(this);
         }
 
-        public void GoToSetUpProfilePage() => MainContent.Content = new SetUpProfilePage();
+        public void GoToSetUpProfilePage() =>
+            MainContent.Content = new SetUpProfilePage();
     }
 }

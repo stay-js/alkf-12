@@ -21,6 +21,11 @@
 
         <CheckBox Name="TermsCheckBox" Content="I accept the terms and conditions." Margin="0,0,0,20"/>
 
-        <Button Content="Sign Up" Width="200" Height="40" Click="SignUpButton_Click"/>
+        <Button
+            Name="SignUpButton"
+            Width="200"
+            Height="40"
+            Content="Sign Up"
+            Click="SignUpButton_Click"/>
     </StackPanel>
 </UserControl>

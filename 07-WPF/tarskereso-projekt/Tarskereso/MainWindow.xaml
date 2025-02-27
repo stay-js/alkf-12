@@ -6,7 +6,5 @@
         xmlns:local="clr-namespace:Tarskereso"
         mc:Ignorable="d"
         Title="Dating App" MinHeight="500" Width="400" Background="LightPink">
-    <Grid HorizontalAlignment="Center">
-        <ContentControl x:Name="MainContent" HorizontalAlignment="Center"/>
-    </Grid>
+    <ContentControl x:Name="MainContent" HorizontalAlignment="Center"/>
 </Window>
