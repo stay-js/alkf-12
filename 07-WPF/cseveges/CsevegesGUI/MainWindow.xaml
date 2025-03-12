@@ -1,0 +1,56 @@
+﻿<Window x:Class="CsevegesGUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CsevegesGUI"
+        mc:Ignorable="d"
+        Title="Csevegés GUI" Height="600" Width="400">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label
+                Grid.Row="0"
+                Grid.Column="0"
+                Margin="5"
+                Padding="0"
+                Content="Kezdeményező"/>
+            <ComboBox
+                Name="SenderComboBox"
+                Grid.Row="0"
+                Grid.Column="1"
+                Margin="5"
+                SelectionChanged="ComboBox_SelectionChanged"/>
+
+            <Label
+                Grid.Row="1"
+                Grid.Column="0"
+                Margin="5"
+                Padding="0"
+                Content="Fogadó (partner)"/>
+            <ComboBox
+                Name="RecieverComboBox"
+                Grid.Row="1"
+                Grid.Column="1"
+                Margin="5"
+                SelectionChanged="ComboBox_SelectionChanged"/>
+        </Grid>
+
+        <Label Grid.Row="1" Margin="5" Padding="0" Content="Csevegések"/>
+        <ListView Grid.Row="2" Margin="5,0,5,5" Name="ChatsListView"/>
+    </Grid>
+</Window>
