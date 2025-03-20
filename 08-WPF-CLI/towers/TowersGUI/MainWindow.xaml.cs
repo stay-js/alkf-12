@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
+using TowersLib;
 
 namespace TowersGUI
 {
@@ -75,8 +76,8 @@ namespace TowersGUI
             }
 
             if (Enumerable.Range(1, _size)
-                .Any(i => CheckDuplicates(GetNumbersInRow(i))
-                || CheckDuplicates(GetNumbersInColumn(i))))
+                .Any(i => Utils.CheckDuplicates(GetNumbersInRow(i))
+                || Utils.CheckDuplicates(GetNumbersInColumn(i))))
             {
                 MessageBox.Show("A kitöltés nem felel meg a szabályoknak!");
                 return;
@@ -92,11 +93,15 @@ namespace TowersGUI
                 int[] rowNumbers = GetNumbersInRow(i);
                 int[] colNumbers = GetNumbersInColumn(i);
 
-                GetTextBoxAt(0, i).Text = CountVisibleTowers(rowNumbers).ToString();
-                GetTextBoxAt(_size + 1, i).Text = CountVisibleTowers(rowNumbers.Reverse().ToArray()).ToString();
+                GetTextBoxAt(0, i).Text = Utils.CountVisibleTowers(rowNumbers).ToString();
+                GetTextBoxAt(_size + 1, i).Text = Utils
+                    .CountVisibleTowers(rowNumbers.Reverse().ToArray())
+                    .ToString();
 
-                GetTextBoxAt(i, 0).Text = CountVisibleTowers(colNumbers).ToString();
-                GetTextBoxAt(i, _size + 1).Text = CountVisibleTowers(colNumbers.Reverse().ToArray()).ToString();
+                GetTextBoxAt(i, 0).Text = Utils.CountVisibleTowers(colNumbers).ToString();
+                GetTextBoxAt(i, _size + 1).Text = Utils
+                    .CountVisibleTowers(colNumbers.Reverse().ToArray())
+                    .ToString();
             }
         }
 
@@ -118,26 +123,5 @@ namespace TowersGUI
             .Children
             .OfType<TextBox>()
             .First(x => Grid.GetRow(x) == row && Grid.GetColumn(x) == col);
-
-        private static bool CheckDuplicates(int[] heights) => heights
-            .GroupBy(x => x)
-            .Any(g => g.Count() > 1);
-
-        private static int CountVisibleTowers(int[] heights)
-        {
-            int max = 0;
-            int count = 0;
-
-            foreach (int h in heights)
-            {
-                if (h > max)
-                {
-                    max = h;
-                    count++;
-                }
-            }
-
-            return count;
-        }
     }
 }

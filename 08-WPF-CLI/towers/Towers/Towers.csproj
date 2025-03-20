@@ -11,4 +11,10 @@
     <ProjectReference Include="..\TowersLib\TowersLib.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="megoldasok.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
