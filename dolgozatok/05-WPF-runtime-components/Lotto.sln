@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35208.52
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LottoGUI_NZ", "LottoGUI_NZ\LottoGUI_NZ.csproj", "{332EE4D8-5098-4C7B-8A1A-4077831A572C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{332EE4D8-5098-4C7B-8A1A-4077831A572C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{332EE4D8-5098-4C7B-8A1A-4077831A572C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{332EE4D8-5098-4C7B-8A1A-4077831A572C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{332EE4D8-5098-4C7B-8A1A-4077831A572C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A36D4730-CED3-4979-9D41-3988D1E161BE}
+	EndGlobalSection
+EndGlobal

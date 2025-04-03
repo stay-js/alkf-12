@@ -1,0 +1,7 @@
+﻿<Application x:Class="LottoGUI_NZ.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:LottoGUI_NZ"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources/>
+</Application>

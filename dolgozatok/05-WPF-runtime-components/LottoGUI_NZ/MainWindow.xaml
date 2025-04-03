@@ -1,0 +1,50 @@
+﻿<Window x:Class="LottoGUI_NZ.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LottoGUI_NZ"
+        mc:Ignorable="d"
+        Title="Lottósorsolás" MinHeight="600" MinWidth="400" SizeToContent="WidthAndHeight">
+    <StackPanel Margin="10">
+        <GroupBox Header="Játékmód">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <RadioButton
+                    Grid.Column="0"
+                    Name="Type0RadioButton"
+                    Content="ötös"
+                    Checked="RadioButton_Checked"/>
+                
+                <RadioButton
+                    Grid.Column="1"
+                    Name="Type1RadioButton"
+                    Content="hatos"
+                    Checked="RadioButton_Checked"/>
+                
+                <RadioButton
+                    Grid.Column="2"
+                    Name="Type2RadioButton"
+                    Content="skandináv"
+                    Checked="RadioButton_Checked"/>
+            </Grid>
+        </GroupBox>
+
+        <Grid Name="NumbersGrid" Margin="0,20"/>
+        
+        <Button
+            Name="PollButton"
+            Content="Sorsolás"
+            Padding="20,5"
+            HorizontalAlignment="Left"
+            IsEnabled="False"
+            Click="PollButton_Click"/>
+
+        <TextBlock Name="Output" Margin="0,20"/>
+    </StackPanel>
+</Window>
