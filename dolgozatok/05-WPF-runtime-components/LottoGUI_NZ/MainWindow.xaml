@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LottoGUI_NZ"
         mc:Ignorable="d"
-        Title="Lottósorsolás" MinHeight="600" MinWidth="400" SizeToContent="WidthAndHeight">
+        Title="Lottósorsolás" MinHeight="550" MinWidth="400" SizeToContent="WidthAndHeight">
     <StackPanel Margin="10">
-        <GroupBox Header="Játékmód">
+        <GroupBox Header="Játékmód" Padding="5">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
