@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nyelviskola", "Nyelviskola\Nyelviskola.csproj", "{77F289A0-B490-4C42-B60C-2855DF94E676}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nyelviskola_Lib", "Nyelviskola_Lib\Nyelviskola_Lib.csproj", "{B9D964F3-F45D-4FE3-9664-F9750F73AC4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nyelviskola_GUI", "Nyelviskola_GUI\Nyelviskola_GUI.csproj", "{2D7FB1BC-90AE-4E86-99F4-DFC879693AC1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{B9D964F3-F45D-4FE3-9664-F9750F73AC4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B9D964F3-F45D-4FE3-9664-F9750F73AC4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B9D964F3-F45D-4FE3-9664-F9750F73AC4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D7FB1BC-90AE-4E86-99F4-DFC879693AC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D7FB1BC-90AE-4E86-99F4-DFC879693AC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D7FB1BC-90AE-4E86-99F4-DFC879693AC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D7FB1BC-90AE-4E86-99F4-DFC879693AC1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
