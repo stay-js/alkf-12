@@ -12,7 +12,9 @@ Console.WriteLine($"5. feladat: {DataStore
 Console.Write("6. feladat: A fordító neve: ");
 
 string name = Console.ReadLine() ?? string.Empty;
-var translator = DataStore.Instance.Translators
+var translator = DataStore
+    .Instance
+    .Translators
     .FirstOrDefault(x => x.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
 
 if (translator is null)

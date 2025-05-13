@@ -2,14 +2,14 @@
 {
     public class Language
     {
-        public int ID { get; init; }
+        public int Id { get; init; }
         public string Name { get; init; }
 
         public Language(string line)
         {
             string[] parts = line.Split(';');
 
-            ID = int.Parse(parts[0]);
+            Id = int.Parse(parts[0]);
             Name = parts[1];
         }
 

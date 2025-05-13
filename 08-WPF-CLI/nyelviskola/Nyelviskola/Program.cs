@@ -12,11 +12,15 @@ Console.WriteLine("6. feladat: " +
 Console.Write("7. feladat: A tanár neve: ");
 
 string name = Console.ReadLine() ?? string.Empty;
-var teacher = DataStore.Instance.Teachers
+var teacher = DataStore
+    .Instance
+    .Teachers
     .FirstOrDefault(x => x.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
 
-if (teacher is null) Console.WriteLine("\tIlyen néven nem található tanár.");
-else Console.WriteLine($"\tTelefont: {teacher.PhoneNumber}\n\tEmail: {teacher.Email}");
+if (teacher is null)
+    Console.WriteLine("\tIlyen néven nem található tanár.");
+else
+    Console.WriteLine($"\tTelefont: {teacher.PhoneNumber}\n\tEmail: {teacher.Email}");
 
 Console.WriteLine("8. feladat: A 3 legtöbb alkalmat tanító tanár:");
 var topThreeTeachers = DataStore

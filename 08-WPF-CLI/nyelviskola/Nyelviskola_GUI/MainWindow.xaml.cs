@@ -29,7 +29,7 @@ namespace Nyelviskola_GUI
             var selectedLanguage = (Language)LanguageComboBox.SelectedItem;
 
             var teachers = DataStore.Instance?.Teachers
-                .Where(t => t.LanguageID == selectedLanguage.ID);
+                .Where(t => t.LanguageId == selectedLanguage.Id);
 
             if (teachers is null || !teachers.Any()) return;
 
