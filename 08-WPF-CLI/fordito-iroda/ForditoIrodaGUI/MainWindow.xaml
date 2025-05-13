@@ -5,8 +5,97 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ForditoIrodaGUI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="Fordító iroda" Height="450" Width="400">
+    <StackPanel Margin="20">
+        <Label Content="Kérem válasszon nyelvet:" Padding="0"/>
+        <ComboBox
+            Name="LanguageComboBox"
+            Margin="0,5,0,20"
+            SelectionChanged="LanguageComboBox_SelectionChanged"/>
 
-    </Grid>
+        <Label Content="Kérem válasszon fordítót:" Padding="0"/>
+        <ComboBox
+            Name="TranslatorComboBox"
+            Margin="0,5,0,30"
+            IsEnabled="False"
+            SelectionChanged="TranslatorComboBox_SelectionChanged"/>
+
+        <Grid Name="DataGrid" Visibility="Collapsed">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="75"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <Label
+                Grid.Row="0"
+                Grid.Column="0"
+                Padding="0"
+                Content="Telefon:"
+                Margin="5"/>
+
+            <TextBox
+                Grid.Row="0"
+                Grid.Column="1"
+                Name="PhoneTextBox"
+                IsReadOnly="True"
+                Margin="5"/>
+
+            <Label
+                Grid.Row="1"
+                Grid.Column="0"
+                Padding="0"
+                Margin="5"
+                Content="Email:"/>
+
+            <TextBox
+                Grid.Row="1"
+                Grid.Column="1"
+                Name="EmailTextBox"
+                IsReadOnly="True"
+                Margin="5"/>
+
+            <Label
+                Grid.Row="2"
+                Grid.Column="0"
+                Padding="0"
+                Margin="5"
+                Content="Fordítási díj:"/>
+
+            <TextBox
+                Grid.Row="2"
+                Grid.Column="1"
+                Name="TranslationFeeTextBox"
+                IsReadOnly="True"
+                Margin="5"/>
+
+            <Label
+                Grid.Row="2"
+                Grid.Column="2"
+                Padding="0"
+                Margin="5"
+                Content="Ft"/>
+
+            <Label
+                Grid.Row="3"
+                Grid.Column="0"
+                Padding="0"
+                Margin="5"
+                Content="Oldalszám:"/>
+            
+            <TextBox
+                Grid.Row="3"
+                Grid.Column="1"
+                Name="DailyPagesTextBox"
+                IsReadOnly="True"
+                Margin="5"/>
+        </Grid>
+    </StackPanel>
 </Window>

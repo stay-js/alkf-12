@@ -12,5 +12,7 @@
             Id = int.Parse(parts[0]);
             Name = parts[1];
         }
+
+        public override string ToString() => Name;
     }
 }

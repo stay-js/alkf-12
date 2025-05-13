@@ -5,7 +5,7 @@
         public int Id { get; init; }
         public string Name { get; init; }
         public int LanguageId { get; init; }
-        public int TranslationPrice { get; init; }
+        public int TranslationFee { get; init; }
         public int DailyPages { get; init; }
         public string PhoneNumber { get; init; }
         public string Email { get; init; }
@@ -17,7 +17,7 @@
             Id = int.Parse(parts[0]);
             Name = parts[1];
             LanguageId = int.Parse(parts[2]);
-            TranslationPrice = int.Parse(parts[3]);
+            TranslationFee = int.Parse(parts[3]);
             DailyPages = int.Parse(parts[4]);
             PhoneNumber = parts[5];
             Email = parts[6];
@@ -32,7 +32,7 @@
             .Instance?
             .Orders
             .Where(x => x.TranslatorId == Id)
-            .Sum(x => x.Price) ?? 0;
+            .Sum(x => x.Cost) ?? 0;
 
         public override string ToString() => $"{Name} ({DataStore
             .Instance?

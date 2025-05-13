@@ -21,11 +21,11 @@ namespace ForditoIrodaLib
             Pages = int.Parse(parts[4]);
         }
 
-        public int Price => Pages *
+        public int Cost => Pages *
             DataStore
             .Instance?
             .Translators
             .First(x => x.Id == TranslatorId)
-            .TranslationPrice ?? 0;
+            .TranslationFee ?? 0;
     }
 }
