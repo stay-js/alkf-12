@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35208.52
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Szepseg", "Szepseg\Szepseg.csproj", "{5C2BB8E9-62E8-440A-8722-5D5A6A4AD89E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SzepsegGUI", "SzepsegGUI\SzepsegGUI.csproj", "{46C008A1-953B-4EA5-926E-A98B62E1465E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SzepsegLib", "SzepsegLib\SzepsegLib.csproj", "{2579D69E-E3E8-4859-A48F-1E2314AE083E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5C2BB8E9-62E8-440A-8722-5D5A6A4AD89E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C2BB8E9-62E8-440A-8722-5D5A6A4AD89E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C2BB8E9-62E8-440A-8722-5D5A6A4AD89E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C2BB8E9-62E8-440A-8722-5D5A6A4AD89E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46C008A1-953B-4EA5-926E-A98B62E1465E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46C008A1-953B-4EA5-926E-A98B62E1465E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46C008A1-953B-4EA5-926E-A98B62E1465E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46C008A1-953B-4EA5-926E-A98B62E1465E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2579D69E-E3E8-4859-A48F-1E2314AE083E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2579D69E-E3E8-4859-A48F-1E2314AE083E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2579D69E-E3E8-4859-A48F-1E2314AE083E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2579D69E-E3E8-4859-A48F-1E2314AE083E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BA251E25-A30D-4547-BAB6-A840A660CDB8}
+	EndGlobalSection
+EndGlobal
